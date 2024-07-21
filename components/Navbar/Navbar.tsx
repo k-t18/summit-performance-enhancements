@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import useNavbar from "@/hooks/GeneralHooks/useNavbar";
-import Button from "react-bootstrap/Button";
-import { FaCartPlus } from "react-icons/fa6";
-import { FaHeart } from "react-icons/fa6";
-import { FaRegCalendar } from "react-icons/fa6";
-import { FaArrowRightToBracket } from "react-icons/fa6";
+import {
+  FaCartPlus,
+  FaHeart,
+  FaRegCalendar,
+  FaArrowRightToBracket,
+} from "react-icons/fa6";
 import HeaderCategories from "./HeaderCategories";
 
 const Navbar = () => {
@@ -17,18 +18,6 @@ const Navbar = () => {
         <nav>
           <div className="navbar">
             <div className="w-100 d-flex justify-content-between pt-3">
-              {/* <div>
-                <Link href="/" legacyBehavior>
-                  <a>
-                    <Image
-                      className="pb-2 mb-1"
-                      src={logo}
-                      alt="logo"
-                      width={50}
-                    />
-                  </a>
-                </Link>
-              </div> */}
               <div className="d-block search-bar">
                 <div className="search-input">
                   <input
@@ -37,8 +26,6 @@ const Navbar = () => {
                     placeholder="Search here"
                     aria-label="Search"
                     aria-describedby="basic-addon1"
-                    // onChange={(e: any) => setSearchTerm(e.target.value)}
-                    // onKeyDown={handleKeyDown}
                   />
                 </div>
               </div>
@@ -65,9 +52,7 @@ const Navbar = () => {
                           <span
                             className="badge badge-warning"
                             id="lblCartCount"
-                          >
-                            {/* {wishlistCount} */}
-                          </span>
+                          ></span>
                           <span className="d-none d-md-inline-block theme-blue ">
                             Wishlist
                           </span>
