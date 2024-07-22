@@ -1,7 +1,6 @@
-import Image from "next/image";
 import useDisplayTagHooks from "../../hooks/HomePageHooks/useHomePageTagSection";
 import SliderSection from "./SliderSection";
-import "../../styles/components/displayTags.module.scss";
+import displayTagStyles from "../../styles/components/displayTags.module.scss";
 
 const DisplayTags = () => {
   const { allTagsData } = useDisplayTagHooks();
@@ -11,19 +10,18 @@ const DisplayTags = () => {
     allTagsData?.filter((items: any) => items.value?.length > 0);
 
   const showDisplayTagSection: any = () => {
-    if (false) {
-    }
-
     if (updateDisplayTagList?.length > 0 && Array.isArray(allTagsData)) {
       return (
-        <div className="display-tags-section pb-5">
+        <div className={` ${displayTagStyles.display_tags_section} pb-5`}>
           <div className="container">
             {updateDisplayTagList?.length > 0 &&
               updateDisplayTagList?.map((tagsData: any, index: any) => {
                 return (
                   <>
                     <div className="text-center text-secondary" key={index}>
-                      <h2 className="pt-5 pb-2 heading-text">
+                      <h2
+                        className={`pt-5 pb-2 ${displayTagStyles.heading_text}`}
+                      >
                         {tagsData.tag_name}
                       </h2>
                       {/* <div className=" product-card ">

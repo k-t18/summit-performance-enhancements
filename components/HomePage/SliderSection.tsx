@@ -2,12 +2,11 @@ import { useEffect } from "react";
 import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import SliderNextArrow from "./SliderNextArrow";
 import SliderPrevArrow from "./SliderPrevArrow";
 import ProductCard from "../../cards/ProductCard";
-import "../../styles/components/sliderSection.module.scss";
 
 const SliderSection = ({ data }: any) => {
   console.log(`data`, data);
