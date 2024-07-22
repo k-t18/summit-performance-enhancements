@@ -24,6 +24,7 @@ const ProductCard = ({ data }: any) => {
             alt="Item Image"
             className={`${productCardStyles.product_code_img}`}
             style={{ width: "100%", height: "100%" }}
+            priority={true}
           />
         </div>
         <div className="card-body text-center">
@@ -40,7 +41,6 @@ const ProductCard = ({ data }: any) => {
           >
             size:{data.length}
           </p>
-
           <div className="text-center mt-2">
             <button
               className={`btn btn-outline-primary text-uppercase mb-0 p-1 ${productCardStyles.add_to_cart_btn}`}

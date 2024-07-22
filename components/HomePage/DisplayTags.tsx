@@ -24,10 +24,6 @@ const DisplayTags = () => {
                       >
                         {tagsData.tag_name}
                       </h2>
-                      {/* <div className=" product-card ">
-                        <div className=" product-card-img "> */}
-                      {/* </div>
-                      </div> */}
                       <SliderSection data={tagsData} />
                     </div>
                   </>

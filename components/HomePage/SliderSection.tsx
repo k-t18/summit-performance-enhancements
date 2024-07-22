@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import Slider from "react-slick";
+import SliderNextArrow from "./SliderNextArrow";
+import SliderPrevArrow from "./SliderPrevArrow";
+import ProductCard from "../../cards/ProductCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import SliderNextArrow from "./SliderNextArrow";
-import SliderPrevArrow from "./SliderPrevArrow";
-import ProductCard from "../../cards/ProductCard";
 
 const SliderSection = ({ data }: any) => {
   console.log(`data`, data);
@@ -56,18 +56,17 @@ const SliderSection = ({ data }: any) => {
       return (
         <>
           <div
-            className={`container-fluid `}
+            className={`container-fluid`}
             style={{ zIndex: "2", position: "relative" }}
           >
             <div className="row">
+              <div className=""></div>
               <Slider {...settings}>
                 {data.value?.length > 0 &&
                   data.value.map((item: any, index: any) => (
-                    <>
-                      <div key={index} className="col-12">
-                        <ProductCard data={item} />
-                      </div>
-                    </>
+                    <div key={index} className="col-12">
+                      <ProductCard data={item} />
+                    </div>
                   ))}
               </Slider>
             </div>
